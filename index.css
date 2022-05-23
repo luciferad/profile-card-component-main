@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+:root {
+    /* Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    /* Neutral */
+    --dark-gray: hsl(0, 0%, 59%);
+}
+html {
+    box-sizing: border-box;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: -60% 220%, 160% -150%;
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 24rem;
+    display: grid;
+    grid-template-rows: 18rem 6rem;
+    grid-template-columns: repeat(3, 8rem);
+    grid-template-areas:
+        "top top top"
+        "bot1 bot2 bot3";
+    background: url(images/bg-pattern-card.svg) repeat-x;
+    background-color: hsl(0, 0%, 100%);
+}
+.profile {
+    width: 24rem;
+    grid-area: top;
+}
+.photo_ring {
+    width: 6.25rem;
+    height: 6.25rem;
+    border: solid white 0.4rem;
+    overflow: hidden;
+    margin-right: 5rem;
+}
+img {
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+#followers, #likes, #photos {
+    text-align: center;
+}
+#followers {
+    grid-area: bot1;
+    justify-self: right;
+}
+#likes {
+    grid-area: bot2;
+    justify-self: center;
+}
+#photos {
+    grid-area: bot3;
+    justify-self: left;
+}
+
+footer {
+    margin-top: 1%;
+}
+
+@media screen and (max-width: 25rem) {
+    .card {
+        width: 21rem;
+        grid-template-rows: 14rem 7rem;
+        grid-template-columns: repeat(3, 7rem);
+    }
+}

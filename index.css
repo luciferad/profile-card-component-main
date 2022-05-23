@@ -26,33 +26,53 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Main Card */
+
 .card {
-    width: 24rem;
     display: grid;
-    grid-template-rows: 18rem 6rem;
-    grid-template-columns: repeat(3, 8rem);
+    grid-template-rows: 19rem 4rem;
+    grid-template-columns: 6rem 9rem 6rem;
     grid-template-areas:
         "top top top"
         "bot1 bot2 bot3";
     background: url(images/bg-pattern-card.svg) repeat-x;
     background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
 }
+
+/* Profile */
+
 .profile {
-    width: 24rem;
     grid-area: top;
-}
-.photo_ring {
-    width: 6.25rem;
-    height: 6.25rem;
-    border: solid white 0.4rem;
-    overflow: hidden;
-    margin-right: 5rem;
+    text-align: center;
 }
 img {
-    position: relative;
-    top: -5px;
-    left: -5px;
+    border: solid white 0.3rem;
+    border-radius: 50%;
+    margin-top: 25%;
 }
+.name_age {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 0.5rem;
+}
+.age {
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+.city {
+    margin: 0 0 2rem 0;
+    color: var(--dark-grayish-blue);
+}
+hr {
+    border: solid 0.01rem var(--dark-gray);
+    border-bottom: none;
+}
+
+/* Stats */
+
 #followers, #likes, #photos {
     text-align: center;
 }
@@ -68,15 +88,21 @@ img {
     grid-area: bot3;
     justify-self: left;
 }
+main > p {
+    font-size: 0.5rem;
+    font-weight: 100;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.1rem;
+}
+.num {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+    letter-spacing: normal;
+}
+
+/* Footer */
 
 footer {
     margin-top: 1%;
-}
-
-@media screen and (max-width: 25rem) {
-    .card {
-        width: 21rem;
-        grid-template-rows: 14rem 7rem;
-        grid-template-columns: repeat(3, 7rem);
-    }
 }

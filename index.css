@@ -32,10 +32,10 @@ body {
 .card {
     display: grid;
     grid-template-rows: 19rem 4rem;
-    grid-template-columns: 6rem 9rem 6rem;
+    grid-template-columns: 21rem;
     grid-template-areas:
-        "top top top"
-        "bot1 bot2 bot3";
+        "top"
+        "bottom";
     background: url(images/bg-pattern-card.svg) repeat-x;
     background-color: hsl(0, 0%, 100%);
     border-radius: 1rem;
@@ -73,26 +73,19 @@ hr {
 
 /* Stats */
 
-#followers, #likes, #photos {
-    text-align: center;
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-top: 0.5rem;
 }
-#followers {
-    grid-area: bot1;
-    justify-self: right;
-}
-#likes {
-    grid-area: bot2;
-    justify-self: center;
-}
-#photos {
-    grid-area: bot3;
-    justify-self: left;
-}
-main > p {
+li {
     font-size: 0.5rem;
     font-weight: 100;
     color: var(--dark-grayish-blue);
     letter-spacing: 0.1rem;
+    list-style: none;
+    text-align: center;
 }
 .num {
     font-size: 1.25rem;
